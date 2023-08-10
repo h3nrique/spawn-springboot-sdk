@@ -1,0 +1,10 @@
+### spawn
+POST http://localhost:8091/api/v1/actors/joe
+
+### invoke
+POST http://localhost:8091/api/v1/actors/joe/sum
+Content-Type: application/json
+
+{
+  "number": 1
+}

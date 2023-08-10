@@ -34,7 +34,7 @@ public class JoeActor {
             Optional<JoeState> oldState = context.getState();
             value = oldState.get().getValue() + msg.getValue();
         } else {
-            //log.info("State is NOT present. Msg getValue is {}", msg.getValue());
+            log.info("State is NOT present. Msg getValue is {}", msg.getValue());
             value = msg.getValue();
         }
 

@@ -35,15 +35,15 @@ services:
       - PROXY_DATABASE_TYPE=mysql
       - SPAWN_STATESTORE_KEY=3Jnb0hZiHIzHTOih7t2cTEPEpY98Tu1wvQkPfq/XwqE=
       - USER_FUNCTION_HOST=springboot-user-function
-      - USER_FUNCTION_PORT=8099
+      - USER_FUNCTION_PORT=8091
     ports:
       - "9001:9001"
 
   springboot-user-function:
-    image: eigr/spawn-springboot-examples:latest
+    image: eigr/spawn-springboot-examples:0.5.3
     restart: always
     ports:
-      - "8099:8099"
+      - "8091:8091"
     environment:
       - SPAWN_PROXY_PORT=9001
       - SPAWN_ACTOR_SYSTEM=spawn-system
